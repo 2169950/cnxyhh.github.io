@@ -1,6 +1,25 @@
-<iframe
-  width="100%"
-  height="100%"
-  frameborder="0"
-  src="http://124.222.217.191">
-</iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XYblog</title>
+<style>
+  .iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+  }
+</style>
+</head>
+<body>
+<iframe id="embeddedPage" src="https://abc.cn"></iframe>
+<script>
+  function updateIFrameSrc() {
+    var currentPath = window.location.pathname;
+    document.getElementById('embeddedPage').src = 'http://124.222.217.191' + currentPath;
+  }
+  window.onload = updateIFrameSrc;
+</script>
+</body>
+</html>
